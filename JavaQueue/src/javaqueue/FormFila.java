@@ -22,6 +22,7 @@ public class FormFila extends javax.swing.JFrame {
             new ArrayDeque<Pessoa>();
     Queue<Pessoa> filaPrioridade = 
             new ArrayDeque<Pessoa>();
+    
     private int count = 0;
 
     public FormFila() {
@@ -31,7 +32,7 @@ public class FormFila extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -218,7 +219,7 @@ public class FormFila extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
     private void carregaArquivo(){
        String csvFile = "dados.csv";
         String line = "";
@@ -259,7 +260,7 @@ public class FormFila extends javax.swing.JFrame {
            filaPrioridade.add(p);
     }
     
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {                                       
         Pessoa p = new Pessoa();
         p.setNome(txtNome.getText());
         p.setRg(txtRG.getText());
@@ -269,9 +270,9 @@ public class FormFila extends javax.swing.JFrame {
         mostrap();
         System.out.println(filaNormal);// console
         System.out.println(filaPrioridade);
-    }//GEN-LAST:event_btnAddActionPerformed
+    }                                      
 
-    private void btnAtenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtenderActionPerformed
+    private void btnAtenderActionPerformed(java.awt.event.ActionEvent evt) {                                           
         
         
         if(evt.getSource() == btnAtender) {
@@ -285,7 +286,7 @@ public class FormFila extends javax.swing.JFrame {
            mostra();
            mostrap(); 
            
-           lblCount.setText("Quantidade:" +Integer.toString(getCount()));
+           lblCount.setText("Atendidos:" +Integer.toString(getCount()));
         }
         
         
@@ -294,7 +295,7 @@ public class FormFila extends javax.swing.JFrame {
             p = filaNormal.remove();// dequeue
             lblProx.setText("Prox:"+p.getNome());
             setCount(0);
-            lblCount.setText("Quantidade:" +Integer.toString(getCount()));
+            lblCount.setText("Atendidos:" +Integer.toString(getCount()));
             mostra();
             mostrap();
         }// fim if
@@ -310,7 +311,7 @@ public class FormFila extends javax.swing.JFrame {
         
         
       
-    }//GEN-LAST:event_btnAtenderActionPerformed
+    }                                          
 
     /**
      * @param args the command line arguments
@@ -347,7 +348,7 @@ public class FormFila extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnAtender;
     private javax.swing.JLabel jLabel1;
@@ -363,5 +364,5 @@ public class FormFila extends javax.swing.JFrame {
     private javax.swing.JTextField txtIdade;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtRG;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
