@@ -306,9 +306,13 @@ public class FormFila extends javax.swing.JFrame {
         if(filaPrioridade.isEmpty()){
              
             JOptionPane.showMessageDialog(null, "Fila prioritaria vazia");
+            
+            
                         
         }
-        
+         if(filaNormal.isEmpty() &&  filaPrioridade.isEmpty()){
+        lblProx.setText("Todos foram atendidos");
+         }
         
       
     }                                          
